@@ -1,12 +1,4 @@
-;;;; -*- Mode: Lisp; Syntax: Common-Lisp -*-
-;;;; Code from Paradigms of AI Programming
-;;;; Copyright (c) 1991 Peter Norvig
 
-;;;; File pat-match.lisp: Pattern matcher from section 6.2
-
-;;; Two bug fixes By Richard Fateman, rjf@cs.berkeley.edu  October 92.
-
-;;; The basic are in auxfns.lisp; look for "PATTERN MATCHING FACILITY"
 
 (defun variable-p (x)
   "Is x a variable (a symbol beginning with `?')?"
@@ -20,8 +12,8 @@
         ((eql pattern input) bindings)
         ((segment-pattern-p pattern)                
          (segment-matcher pattern input bindings))  
-        ((single-pattern-p pattern)                 ; ***
-         (single-matcher pattern input bindings))   ; ***
+        ((single-pattern-p pattern)                
+         (single-matcher pattern input bindings))  
         ((and (consp pattern) (consp input)) 
          (pat-match (rest pattern) (rest input)
                     (pat-match (first pattern) (first input) 

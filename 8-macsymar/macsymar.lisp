@@ -1,8 +1,3 @@
-;;;; -*- Mode: Lisp; Syntax: Common-Lisp -*-
-;;;; Code from Paradigms of AI Programming
-;;;; Copyright (c) 1991 Peter Norvig
-
-;;;; File macsymar.lisp: The rewrite rules for MACSYMA in Chapter 8
 
 (requires "macsyma")
 
